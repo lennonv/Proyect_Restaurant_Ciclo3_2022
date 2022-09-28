@@ -1,0 +1,32 @@
+SELECT id, nombre, hora_inicio, expresion_ejecucion from ADFV_CONFIGURACION_PROCESO_AUTOMATICO where nombre like ('%macrotitulo%')					
+
+select * from ADFV_REGISTRO_EJECUCION_PROCESO_AUTOMATICO where configuracion_proceso_automatico=163 
+and cast(fecha_ejecucion as date) ='2022-09-12' order by id desc								
+
+select *
+from ADFV.NUEVO_DCV.ADFV_TIPO_SERVICIO where nombre = 'Conciliación Programa de Emisión'
+
+select *
+from ADFV.NUEVO_DCV.ADFV_CONFIGURACION_REPORTE where nombre_reporte ='generarReporteMacrotitulo'
+
+select *
+from ADFV.NUEVO_DCV.ADFV_CONFIGURACION_FILTRO_REPORTE where id_configuracion_reporte = 12
+
+select	*
+from	ADFV.NUEVO_DCV.ADFV_TRIADA_MOD_FUN_TIPO_SERV
+where tipo_servicio = 253
+
+select	*
+from	ADFV.NUEVO_DCV.ADFV_PARAMETRO_ENTRADA where triada = 257
+
+-------- correos destinatarios
+
+select	*
+from	ADFV.NUEVO_DCV.ADFV_DESTINATARIO_PLANTILLA
+where plantilla = 41 
+
+--jguerrero@softmanagement.com.co
+
+select codigo, *
+from	ADFV.NUEVO_DCV.ADFV_PLANTILLA_CORREO	
+where codigo = 'PE-003'
