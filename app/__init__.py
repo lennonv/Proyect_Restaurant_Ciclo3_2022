@@ -7,7 +7,7 @@ def create_app(test_config=None):
     # Create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        # SECRET_KEY = dbc.SEC,
+        SECRET_KEY = dbc.SEC,
         DATABASE = os.path.join(app.instance_path, 'app.sqlite'),
     )
 
@@ -30,8 +30,8 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
     
-    # from . import inbox
-    # app.register_blueprint(inbox.bp)
+    from . import inbox
+    app.register_blueprint(inbox.bp)
     app.add_url_rule('/index', endpoint='auth.register')
     app.add_url_rule('/index.html', endpoint='auth.register')
     app.add_url_rule('/', endpoint='auth.register')

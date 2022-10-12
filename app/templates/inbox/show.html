@@ -15,7 +15,7 @@
     <article class="post mx-4 mb-3 pl-2 border-l-4 border-slate-700">
       <header>
         <div>
-          <h3 class="text-lg">{{ message['subject'] }} from {{ message['username'] }} on {{ message['created'].strftime('%Y-%m-%d') }}</h3>
+          <h3 class="text-lg">{{ message['subject'] }} from {{ message['username'] }} on {{ message['created'] }}</h3>
         </div>
       </header>
       <p class="body text-slate-600">{{ message['body'] }}</p>
